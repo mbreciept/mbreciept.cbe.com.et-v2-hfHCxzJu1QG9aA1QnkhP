@@ -46,9 +46,9 @@ iframe{
 
 <div class="container">
 
-<iframe src="CBE-Receipt-FT26171QK8N9.pdf"></iframe>
+<iframe src="Receipt.pdf"></iframe>
 
-<a class="download" CBE-Receipt-FT26171QK8N9.pdf" download>
+<a class="download"Receipt.pdf" download>
 Download
 </a>
 
