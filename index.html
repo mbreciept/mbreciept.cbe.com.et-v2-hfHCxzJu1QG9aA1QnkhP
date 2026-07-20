@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,7 @@
             background: #ffffff; 
             border: 1px solid #dcdcdc; 
             box-sizing: border-box;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Added shadow intensity matching the reference image */
         }
         
         /* Header */
@@ -147,37 +149,41 @@
             margin-bottom: 0 !important;
         }
 
-        /* Footer Box (Amount & QR) */
+        /* Footer Box (Outer container + Inner Amount Box matching official look) */
         .footer-box-container {
             padding: 0 28px 25px 28px;
         }
         .footer-box { 
             border: 1px solid #dcdcdc; 
-            background: #f8f9fa; 
-            padding: 8px 16px; 
+            background: #ffffff; 
+            padding: 12px 16px; 
             display: flex; 
-            justify-content: flex-start; /* Aligned content left/center properly to keep QR inside */
+            justify-content: space-between; 
             align-items: center; 
             box-sizing: border-box;
             position: relative;
-            min-height: 48px; 
+            min-height: 65px; 
         }
-        .amount-word { 
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+        .amount-word-box {
+            background: #f1f2f4;
+            border: 1px solid #e1e3e6;
+            padding: 8px 30px;
             text-align: center;
             font-size: 11px;
-            line-height: 1.3;
-            font-weight: bold; /* Made font bold as requested */
+            line-height: 1.4;
+            position: absolute;
+            left: 16px;
+            right: 85px;
+            box-sizing: border-box;
         }
-        .amount-word strong {
+        .amount-word-box strong {
             font-size: 11px;
             color: #111;
             font-weight: bold;
         }
-        .amount-word span {
-            font-weight: bold; /* Ensure text value is bold */
+        .amount-word-box span {
+            font-weight: bold;
+            color: #111;
         }
         .qr-wrapper {
             margin-left: auto;
@@ -185,8 +191,8 @@
             z-index: 5;
         }
         .qr { 
-            width: 48px; 
-            height: 48px;
+            width: 52px; 
+            height: 52px;
             display: block;
         }
 
@@ -208,7 +214,7 @@
             font-size: 10px;
         }
 
-        /* Download Button Container - Positioned significantly lower at the bottom */
+        /* Download Button Container - Positioned precisely at the very bottom */
         .btn-container {
             margin: 550px 0 20px 0; 
             text-align: center;
@@ -222,6 +228,7 @@
             border-radius: 4px;
             cursor: pointer;
             font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Matching shadow style for the button */
         }
     </style>
 </head>
@@ -285,7 +292,7 @@
 
             <div class="footer-box-container">
                 <div class="footer-box">
-                    <div class="amount-word">
+                    <div class="amount-word-box">
                         <strong>Amount in Word:</strong><br>
                         <span>Fifty ETB</span>
                     </div>
